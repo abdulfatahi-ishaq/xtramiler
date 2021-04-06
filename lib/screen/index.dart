@@ -9,6 +9,17 @@ class Index extends StatefulWidget {
 class _IndexState extends State<Index> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Container(
+        constraints: BoxConstraints.expand(),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('images/logo1.jpg'), fit: BoxFit.cover),
+        ),
+        child: Center(
+          child: Column(),
+        ),
+      ),
+    );
   }
 }
