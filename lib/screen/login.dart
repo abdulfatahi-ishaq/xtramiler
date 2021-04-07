@@ -21,15 +21,24 @@ class _LoginState extends State<Login> {
         ),
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+            padding: const EdgeInsets.only(left: 20.0, right: 20.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                HomeButton(),
+                TextFormField(
+                  decoration: InputDecoration(
+                      border: UnderlineInputBorder(),
+                      labelText: 'Enter your username'),
+                ),
+                HomeButton(
+                  label: "Login",
+                ),
                 SizedBox(
                   height: 10.0,
                 ),
-                HomeButton()
+                HomeButton(
+                  label: "Register",
+                )
               ],
             ),
           ),
