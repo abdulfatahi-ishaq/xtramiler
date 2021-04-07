@@ -9,6 +9,17 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Container(
+        constraints: BoxConstraints.expand(),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('images/logo1.jpg'), fit: BoxFit.fill),
+        ),
+        child: Center(
+          child: Column(),
+        ),
+      ),
+    );
   }
 }
