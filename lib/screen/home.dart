@@ -104,14 +104,15 @@ class _HomeState extends State<Home> {
             new Inputbox(labelText: "Delivery Fee", type: TextInputType.number),
             SizedBox(height: 10),
             TextButton(
-                onPressed: () {},
-                child: Text(
-                  'Submit',
-                  style: TextStyle(
-                      color: Colors.redAccent[700],
-                      fontFamily: 'Ubuntu',
-                      fontWeight: FontWeight.bold),
-                ))
+              onPressed: () {},
+              child: Text(
+                'Submit',
+                style: TextStyle(
+                    color: Colors.redAccent[700],
+                    fontFamily: 'Ubuntu',
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
           ],
         ),
       ),

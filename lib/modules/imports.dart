@@ -5,4 +5,5 @@ export 'package:xtramiler/screen/help.dart';
 export 'package:xtramiler/screen/flash.dart';
 export 'package:xtramiler/screen/login.dart';
 export 'package:xtramiler/screen/register.dart';
-export 'package:xtramiler/modules/inputbox.dart';
+export 'package:xtramiler/components/inputbox.dart';
+export 'package:xtramiler/components/custombutton.dart';

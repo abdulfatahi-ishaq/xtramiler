@@ -14,10 +14,25 @@ class _LoginState extends State<Login> {
         constraints: BoxConstraints.expand(),
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('images/logo1.jpg'), fit: BoxFit.fill),
+              colorFilter: new ColorFilter.mode(
+                  Colors.redAccent[700].withOpacity(0.5), BlendMode.dstIn),
+              image: AssetImage('images/logo1.jpg'),
+              fit: BoxFit.fill),
         ),
         child: Center(
-          child: Column(),
+          child: Padding(
+            padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                HomeButton(),
+                SizedBox(
+                  height: 10.0,
+                ),
+                HomeButton()
+              ],
+            ),
+          ),
         ),
       ),
     );
