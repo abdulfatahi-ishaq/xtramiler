@@ -25,20 +25,27 @@ class _LoginState extends State<Login> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                TextFormField(
-                  decoration: InputDecoration(
-                      border: UnderlineInputBorder(),
-                      labelText: 'Enter your username'),
-                ),
+                new Inputbox(labelText: "Full Name", type: TextInputType.name),
+                new Inputbox(
+                    labelText: "Email", type: TextInputType.emailAddress),
+                new Inputbox(
+                    labelText: "Phone Number", type: TextInputType.phone),
+                new Inputbox(
+                    labelText: "Password", type: TextInputType.visiblePassword),
                 HomeButton(
-                  label: "Login",
+                  label: "Register",
                 ),
                 SizedBox(
                   height: 10.0,
                 ),
-                HomeButton(
-                  label: "Register",
-                )
+                Text('OR'),
+                SizedBox(
+                  height: 10.0,
+                ),
+                Text(
+                  'Login',
+                  style: TextStyle(fontStyle: FontStyle.italic),
+                ),
               ],
             ),
           ),
