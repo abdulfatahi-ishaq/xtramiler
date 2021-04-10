@@ -1,26 +1,33 @@
 import 'package:xtramiler/modules/imports.dart';
 
-class Home extends StatefulWidget {
-  static final String id = "home_page";
+class Dashboard extends StatefulWidget {
+  static final String id = "dashboard_page";
   @override
-  _HomeState createState() => _HomeState();
+  _DashboardState createState() => _DashboardState();
 }
 
-class _HomeState extends State<Home> {
-  @override
+class _DashboardState extends State<Dashboard> {
+  // int _currentIndex = 0;
+  // void onTabTapped(int index) {
+  //   setState(() {
+  //     _currentIndex = index;
+  //   });
+  // }
+
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.redAccent[700],
-        title: Text(
-          'Xtramiler',
-          style: TextStyle(fontFamily: 'Ubuntu', fontSize: 30),
-        ),
-        actions: <Widget>[
-          IconButton(icon: Icon(Icons.contact_support), onPressed: () {}),
-          IconButton(icon: Icon(Icons.info), onPressed: () {})
-        ],
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.redAccent[700],
+      //   lead
+      //   title: Text(
+      //     'Xtramiler',
+      //     style: TextStyle(fontFamily: 'Ubuntu', fontSize: 30),
+      //   ),
+      //   actions: <Widget>[
+      //     IconButton(icon: Icon(Icons.contact_support), onPressed: () {}),
+      //     IconButton(icon: Icon(Icons.info), onPressed: () {})
+      //   ],
+      // ),
       body: Padding(
         padding: EdgeInsets.all(20.0),
         child: ListView(
@@ -47,23 +54,23 @@ class _HomeState extends State<Home> {
             Divider(
               thickness: 0.3,
             ),
-            Text(
-              "Sender's Details",
-              style:
-                  TextStyle(fontFamily: 'Ubuntu', fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 10),
-            new Inputbox(labelText: "Name", type: TextInputType.name),
-            SizedBox(
-              height: 20,
-            ),
-            new Inputbox(
-                labelText: "Address", type: TextInputType.streetAddress),
-            SizedBox(
-              height: 20,
-            ),
-            new Inputbox(labelText: "Number", type: TextInputType.number),
-            SizedBox(height: 10),
+            // Text(
+            //   "Sender's Details",
+            //   style:
+            //       TextStyle(fontFamily: 'Ubuntu', fontWeight: FontWeight.bold),
+            // ),
+            // SizedBox(height: 10),
+            // new Inputbox(labelText: "Name", type: TextInputType.name),
+            // SizedBox(
+            //   height: 20,
+            // ),
+            // new Inputbox(
+            //     labelText: "Address", type: TextInputType.streetAddress),
+            // SizedBox(
+            //   height: 20,
+            // ),
+            // new Inputbox(labelText: "Number", type: TextInputType.number),
+            // SizedBox(height: 10),
             Text(
               "Receiver's Details",
               style:
@@ -115,6 +122,15 @@ class _HomeState extends State<Home> {
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.bike_scooter), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+          BottomNavigationBarItem(icon: Icon(Icons.info), label: 'Info')
+        ],
       ),
     );
   }

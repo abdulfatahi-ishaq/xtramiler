@@ -10,7 +10,7 @@ class Inputbox extends StatelessWidget {
       decoration: new InputDecoration(
         labelText: labelText,
         filled: true,
-        fillColor: Colors.white,
+        fillColor: Colors.yellow.shade200,
         border: new OutlineInputBorder(
           borderRadius: new BorderRadius.circular(5.0),
           borderSide: new BorderSide(),

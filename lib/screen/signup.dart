@@ -51,6 +51,7 @@ class _SignupState extends State<Signup> {
                 ),
                 HomeButton(
                   label: "Register",
+                  btnColor: Colors.redAccent[700],
                 )
               ],
             ),
