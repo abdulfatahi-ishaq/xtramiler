@@ -7,3 +7,4 @@ export 'package:xtramiler/screen/profile.dart';
 export 'package:xtramiler/screen/signup.dart';
 export 'package:xtramiler/components/inputbox.dart';
 export 'package:xtramiler/components/custombutton.dart';
+export 'package:firebase_database/firebase_database.dart';

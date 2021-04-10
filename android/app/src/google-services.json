@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "464994437489",
+    "project_id": "xtramiler-68878",
+    "storage_bucket": "xtramiler-68878.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464994437489:android:17e21f6c0d068bf9450ed0",
+        "android_client_info": {
+          "package_name": "com.devabfat.xtramiler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "464994437489-g4gqtlca5t4n6ojr09vpfpms11ll52fg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkkgylbBxNR0h8SwyQw8ekm2TVqHuxzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "464994437489-g4gqtlca5t4n6ojr09vpfpms11ll52fg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
