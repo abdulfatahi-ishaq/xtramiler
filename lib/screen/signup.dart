@@ -1,12 +1,12 @@
 import 'package:xtramiler/modules/imports.dart';
 
-class Login extends StatefulWidget {
-  static final String id = "login_page";
+class Signup extends StatefulWidget {
+  static final String id = "Signup_page";
   @override
-  _LoginState createState() => _LoginState();
+  _SignupState createState() => _SignupState();
 }
 
-class _LoginState extends State<Login> {
+class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,26 +26,32 @@ class _LoginState extends State<Login> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 new Inputbox(labelText: "Full Name", type: TextInputType.name),
+                SizedBox(
+                  height: 10.0,
+                ),
                 new Inputbox(
                     labelText: "Email", type: TextInputType.emailAddress),
+                SizedBox(
+                  height: 10.0,
+                ),
                 new Inputbox(
                     labelText: "Phone Number", type: TextInputType.phone),
+                SizedBox(
+                  height: 10.0,
+                ),
                 new Inputbox(
                     labelText: "Password", type: TextInputType.visiblePassword),
+                SizedBox(
+                  height: 10.0,
+                ),
+                new Inputbox(
+                    labelText: "Address", type: TextInputType.visiblePassword),
+                SizedBox(
+                  height: 10.0,
+                ),
                 HomeButton(
                   label: "Register",
-                ),
-                SizedBox(
-                  height: 10.0,
-                ),
-                Text('OR'),
-                SizedBox(
-                  height: 10.0,
-                ),
-                Text(
-                  'Login',
-                  style: TextStyle(fontStyle: FontStyle.italic),
-                ),
+                )
               ],
             ),
           ),

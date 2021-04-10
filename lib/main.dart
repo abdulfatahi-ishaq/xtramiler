@@ -12,8 +12,8 @@ class Xtramiler extends StatelessWidget {
         Home.id: (context) => Home(),
         Help.id: (context) => Help(),
         AboutUs.id: (context) => AboutUs(),
-        Register.id: (context) => Register(),
-        Login.id: (context) => Login()
+        Signup.id: (context) => Signup(),
+        Signin.id: (context) => Signin()
       },
     );
   }

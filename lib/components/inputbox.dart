@@ -9,6 +9,7 @@ class Inputbox extends StatelessWidget {
     return new TextFormField(
       decoration: new InputDecoration(
         labelText: labelText,
+        filled: true,
         fillColor: Colors.white,
         border: new OutlineInputBorder(
           borderRadius: new BorderRadius.circular(5.0),
