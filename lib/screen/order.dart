@@ -8,6 +8,7 @@ class Order extends StatefulWidget {
 
 class _OrderState extends State<Order> {
   Widget build(BuildContext context) {
+    // FirebaseAuth auth = FirebaseAuth.instance;
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: ListView(
