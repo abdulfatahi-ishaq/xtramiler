@@ -6,35 +6,49 @@ class DeliveryBox extends StatefulWidget {
 }
 
 class _DeliveryBoxState extends State<DeliveryBox> {
-  String dropdownValue = 'Berger Region';
+  // String dropdownValue = 'Berger Region';
+  String _selectedLocation;
+  static const _location = [
+    'Apple',
+    'Orange',
+    'Lemon',
+    'Strawberry',
+    'Peach',
+    'Cherry',
+    'Watermelon',
+  ];
   @override
   Widget build(BuildContext context) {
-    return DropdownButton<String>(
-        value: dropdownValue,
-        hint: Text('Select Location'),
-        icon: const Icon(Icons.arrow_downward),
-        iconSize: 24,
-        elevation: 16,
-        style: const TextStyle(color: Colors.deepPurple),
-        underline: Container(
-          height: 2,
-          color: Colors.deepPurpleAccent,
+    return InputDecorator(
+      decoration: InputDecoration(
+        filled: true,
+        fillColor: Colors.yellow.shade200,
+        labelText: 'Pick Up Location',
+        labelStyle: TextStyle(color: Colors.blue[300], fontSize: 16),
+        hintText: 'Select Delivery Location',
+        // Theme.of(context)
+        //     .primaryTextTheme
+        //     .caption
+        //     .copyWith(color: Colors.blue[300]),
+        border: const OutlineInputBorder(),
+      ),
+      child: DropdownButtonHideUnderline(
+        child: DropdownButton(
+          isExpanded: true,
+          isDense: true, // Reduces the dropdowns height by +/- 50%
+          // icon: Icon(Icons.keyboard_arrow_down),
+          value: _selectedLocation,
+          items: _location.map((item) {
+            return DropdownMenuItem(
+              value: item,
+              child: Text(item),
+            );
+          }).toList(),
+          onChanged: (selectedItem) => setState(
+            () => _selectedLocation = selectedItem,
+          ),
         ),
-        onChanged: (String newValue) {
-          setState(() {
-            dropdownValue = newValue;
-          });
-        },
-        items: <String>[
-          'Berger Region',
-          'Ogudu Region',
-          'Ikoyi Region',
-          'Ikeja Region'
-        ].map<DropdownMenuItem<String>>((String value) {
-          return DropdownMenuItem<String>(
-            value: value,
-            child: Text(value),
-          );
-        }).toList());
+      ),
+    );
   }
 }

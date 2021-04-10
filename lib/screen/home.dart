@@ -9,6 +9,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _currentIndex = 0;
   final List<Widget> _children = [Order(), Profile(), Help()];
+
   void onTabTapped(int index) {
     setState(() {
       _currentIndex = index;
@@ -19,9 +20,8 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
+        currentIndex: _currentIndex,
         onTap: onTabTapped,
-        selectedItemColor: Colors.redAccent[700],
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.bike_scooter), label: 'Request'),

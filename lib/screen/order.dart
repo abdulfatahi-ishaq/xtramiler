@@ -36,7 +36,13 @@ class _OrderState extends State<Order> {
           ),
           Text(
             "Receiver's Details",
-            style: TextStyle(fontFamily: 'Ubuntu', fontWeight: FontWeight.bold),
+            style: TextStyle(
+                fontFamily: 'Ubuntu',
+                fontSize: 20,
+                fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            height: 10,
           ),
           new Inputbox(labelText: "Name", type: TextInputType.name),
           SizedBox(
@@ -50,7 +56,10 @@ class _OrderState extends State<Order> {
           SizedBox(height: 10),
           Text(
             "PickUp Details",
-            style: TextStyle(fontFamily: 'Ubuntu', fontWeight: FontWeight.bold),
+            style: TextStyle(
+                fontFamily: 'Ubuntu',
+                fontSize: 20,
+                fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 10),
           new Inputbox(labelText: "PickUp Item", type: TextInputType.name),
@@ -73,7 +82,7 @@ class _OrderState extends State<Order> {
           ),
           SizedBox(height: 10),
           HomeButton(
-            label: "Submit",
+            label: "SUBMIT REQUEST",
             btnColor: Colors.blue[400],
           )
         ],
