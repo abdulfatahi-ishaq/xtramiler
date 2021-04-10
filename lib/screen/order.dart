@@ -59,27 +59,23 @@ class _OrderState extends State<Order> {
           ),
           // new Inputbox(
           //     labelText: "Pickup Location", type: TextInputType.streetAddress),
-          SelectionBox(),
+          DeliveryBox(),
           SizedBox(
             height: 20,
           ),
           new Inputbox(
-              labelText: "Delivery Location", type: TextInputType.name),
+            labelText: "Delivery Fee",
+            type: TextInputType.name,
+            isDelivery: false,
+          ),
           SizedBox(
             height: 20,
           ),
-          new Inputbox(labelText: "Delivery Fee", type: TextInputType.number),
           SizedBox(height: 10),
-          TextButton(
-            onPressed: () {},
-            child: Text(
-              'Submit',
-              style: TextStyle(
-                  color: Colors.redAccent[700],
-                  fontFamily: 'Ubuntu',
-                  fontWeight: FontWeight.bold),
-            ),
-          ),
+          HomeButton(
+            label: "Submit",
+            btnColor: Colors.blue[400],
+          )
         ],
       ),
     );

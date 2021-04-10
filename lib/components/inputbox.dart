@@ -1,12 +1,14 @@
 import 'package:xtramiler/modules/imports.dart';
 
 class Inputbox extends StatelessWidget {
-  Inputbox({this.labelText, this.type});
+  Inputbox({this.labelText, this.type, this.isDelivery});
   final String labelText;
   final TextInputType type;
+  final bool isDelivery;
   @override
   Widget build(BuildContext context) {
     return new TextFormField(
+      enabled: isDelivery,
       decoration: new InputDecoration(
         labelText: labelText,
         filled: true,
