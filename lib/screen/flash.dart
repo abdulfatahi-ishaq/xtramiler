@@ -11,8 +11,7 @@ class Flash extends StatefulWidget {
 class _FlashState extends State<Flash> {
   @override
   Widget build(BuildContext context) {
-    Timer(Duration(seconds: 3),
-        () => Navigator.pushNamed((context), Dashboard.id));
+    Timer(Duration(seconds: 3), () => Navigator.pushNamed((context), Home.id));
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(

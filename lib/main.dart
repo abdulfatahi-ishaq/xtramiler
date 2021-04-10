@@ -9,11 +9,12 @@ class Xtramiler extends StatelessWidget {
       initialRoute: Flash.id,
       routes: {
         Flash.id: (context) => Flash(),
-        Dashboard.id: (context) => Dashboard(),
+        Order.id: (context) => Order(),
         Help.id: (context) => Help(),
         AboutUs.id: (context) => AboutUs(),
         Signup.id: (context) => Signup(),
-        Signin.id: (context) => Signin()
+        Profile.id: (context) => Profile(),
+        Home.id: (context) => Home()
       },
     );
   }
